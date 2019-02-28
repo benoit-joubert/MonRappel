@@ -21,9 +21,21 @@
     <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\/script>')</script>
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
+
+    <script>
+        var pageSeConnecter = function() {
+            $('#contenupage').empty();
+            $('<form style="display: inline-block"></form>')
+                .append('<input id="login" name="login"><br/>')
+                .append('<input id="password" name="password"><br>')
+                .append('<button type="submit" class="btn btn-primary">Connexion</button >')
+                .appendTo('#contenupage');
+        }
+    </script>
+
 </head>
 
-<body>
+<body style="text-align: center">
 <!--[if lte IE 9]>
 <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
 <![endif]-->
@@ -33,8 +45,8 @@
     <a class="navbar-brand" href="#">MonRappel</a>
     <div id="boutonSeConnecter">
         <ul class="navbar-nav mr-auto">
-            <li class="nav-item">
-                <a type="button" class="btn btn-success">Se connecter</a>
+            <li class="nav-item active">
+                <button id="seconnecter" class="btn btn-success" onclick="pageSeConnecter()">Se Connecter</button>
             </li>
         </ul>
     </div>
