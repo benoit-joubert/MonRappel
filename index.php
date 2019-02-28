@@ -21,6 +21,13 @@
     <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\/script>')</script>
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
+
+    <script>
+        var pageSeConnecter = function() {
+            $('<p></p>').append('CA MARCHE').appendTo('#contenupage');
+        }
+    </script>
+
 </head>
 
 <body>
@@ -33,8 +40,8 @@
     <a class="navbar-brand" href="#">MonRappel</a>
     <div id="boutonSeConnecter">
         <ul class="navbar-nav mr-auto">
-            <li class="nav-item">
-                <a type="button" class="btn btn-success">Se connecter</a>
+            <li class="nav-item active">
+                <button id="seconnecter" class="btn btn-success" onclick="pageSeConnecter()">Se Connecter</button>
             </li>
         </ul>
     </div>
