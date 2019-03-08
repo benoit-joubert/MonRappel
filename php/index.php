@@ -25,12 +25,23 @@
     <script>
         $(document).ready(function() {
             $('#seconnecter').click(function () {
-                console.log("JE RENTRE DANS LA FONCTION");
                 $('#contenupage').empty();
-                $('<form style="display: inline-block"></form>')
-                    .append('<input id="login" name="login"><br/>')
-                    .append('<input id="password" name="password"><br>')
-                    .append('<button type="submit" class="btn btn-primary">Connexion</button >')
+                $('<form style="display: inline-block" action="is_connected.php" method="post"></form>')
+                    .append('<input id="login" name="login" placeholder="Pseudo"><br/>')
+                    .append('<input type="password" id="password" name="password" placeholder="Mot de passe"><br>')
+                    .append('<button type="submit" class="btn btn-primary">Connexion</button ><br>')
+                    .appendTo('#contenupage');
+
+            });
+
+            $('#inscription').click(function() {
+                $('#contenupage').empty();
+                $('<form style="display: inline-block" action="is_connected.php" method="post"></form>')
+                    .append('<input id="nom" name="nom" placeholder="Nom"><br/>')
+                    .append('<input id="prenom" name="prenom" placeholder="Prenom"><br/>')
+                    .append('<input id="login" name="login" placeholder="Pseudo"><br/>')
+                    .append('<input type="password" id="password" name="password" placeholder="Mot de passe"><br>')
+                    .append('<button type="submit" class="btn btn-primary">Connexion</button ><br>')
                     .appendTo('#contenupage');
 
             });
@@ -50,6 +61,7 @@
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
                 <button id="seconnecter" class="btn btn-success">Se Connecter</button>
+                <button id="inscription" class="btn btn-primary">Inscription</button>
             </li>
         </ul>
     </div>
