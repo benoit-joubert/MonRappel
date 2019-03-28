@@ -11,8 +11,6 @@
     <link rel="apple-touch-icon" href="../icon.png">
     <!-- Place favicon.ico in the root directory -->
 
-    <link rel="stylesheet" href="../css/normalize.css">
-    <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     <meta name="theme-color" content="#fafafa">
@@ -22,31 +20,7 @@
     <script src="../js/plugins.js"></script>
     <script src="js/main.js"></script>
 
-    <script>
-        $(document).ready(function() {
-            $('#seconnecter').click(function () {
-                $('#contenupage').empty();
-                $('<form style="display: inline-block" action="is_connected.php" method="post"></form>')
-                    .append('<input id="login" name="login" placeholder="Pseudo"><br/>')
-                    .append('<input type="password" id="password" name="password" placeholder="Mot de passe"><br>')
-                    .append('<button type="submit" class="btn btn-primary">Connexion</button ><br>')
-                    .appendTo('#contenupage');
-
-            });
-
-            $('#inscription').click(function() {
-                $('#contenupage').empty();
-                $('<form style="display: inline-block" action="is_connected.php" method="post"></form>')
-                    .append('<input id="nom" name="nom" placeholder="Nom"><br/>')
-                    .append('<input id="prenom" name="prenom" placeholder="Prenom"><br/>')
-                    .append('<input id="login" name="login" placeholder="Pseudo"><br/>')
-                    .append('<input type="password" id="password" name="password" placeholder="Mot de passe"><br>')
-                    .append('<button type="submit" class="btn btn-primary">Connexion</button ><br>')
-                    .appendTo('#contenupage');
-
-            });
-        })
-    </script>
+    <script src="../js/vendor/fonctions.js"></script>
 
 </head>
 
