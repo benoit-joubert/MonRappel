@@ -14,18 +14,19 @@ if (isset($_POST['login']) && isset($_POST['password'])) {
     }
 
     else if ($resultat['trouve'] == 1){
-        echo 'Bonjour ' . $_POST['login'];
+        setcookie("user",$_POST['login'],time() + (86400 * 30),"/");
+        header('Location: profil.php' . $_SESSION['user']);
     }
 
     else {
         echo "Erreur";
         echo $resultat;
     }
+
+
 }
 
 header('Cache-Control: no-cache, must-revalidate');
 header('Expires: Mon, 26 Jul 1997 05:00:00 GMT');
 header('Content-type: application/json');
-
-//echo json_encode($result);
 ?>

@@ -14,13 +14,11 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     <meta name="theme-color" content="#fafafa">
-    <script src="../js/vendor/modernizr-3.6.0.min.js"></script>
+    <script src="/js/vendor/modernizr-3.6.0.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-    <script>window.jQuery || document.write('<script src="../js/vendor/jquery-3.3.1.min.js"><\/script>')</script>
-    <script src="../js/plugins.js"></script>
-    <script src="js/main.js"></script>
+    <script>window.jQuery || document.write('<script src="/js/vendor/jquery-3.3.1.min.js"><\/script>')</script>
+    <script src="/js/plugins.js"></script>
 
-    <script src="../js/vendor/fonctions.js"></script>
 
 </head>
 
@@ -28,20 +26,23 @@
 <!--[if lte IE 9]>
 <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
 <![endif]-->
-
 <nav class="navbar navbar-dark bg-dark">
-    <a class="navbar-brand" href="#">MonRappel</a>
-    <div id="boutonSeConnecter">
+    <a class="navbar-brand" href="index.php">MonRappel</a>
+    <p>Bonjour <?php echo $_COOKIE["user"];?></p>
+    <div id="contenuNavBar">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-                <button id="seconnecter" class="btn btn-success">Se Connecter</button>
-                <button id="inscription" class="btn btn-primary">Inscription</button>
+                <form style="display: inline-block" action="/php/deconnexion.php" method="post">
+                    <button type="submit" id="deconnexion" class="btn btn-danger">Déconnexion</button>
+                </form>
             </li>
         </ul>
     </div>
 </nav>
 
 <div id="contenupage">
+
+    <?php echo $_SESSION['login']?>
 
 </div>
 
