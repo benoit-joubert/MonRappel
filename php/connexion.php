@@ -12,7 +12,7 @@ if (isset($_POST['login']) && isset($_POST['password'])) {
     //$_SESSION['user_id'] = 12;
     $resultat = $query->fetch();
     if ($resultat['trouve'] == 0){
-        echo "Non trouvé";
+        $data->msg = "Non trouvé";
     }
 
     else if ($resultat['trouve'] == 1){

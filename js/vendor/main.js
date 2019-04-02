@@ -12,8 +12,20 @@ $(document).ready(function () {
                 '                    <button type="submit" id="deconnexion" class="btn btn-danger">Déconnexion</button>\n' +
                 '                </form>\n' +
                 '            </li>\n' +
-                '        </ul>');
-            $('#contenupage').append('test');
+                '        </ul>')
+            $('#contenupage').append('<table>' +
+                '<thead>' +
+                '<tr>' +
+                '<th>' +
+                'Date d\'ajout</th>' +
+                '<th>' +
+                'Mes Rappels</th>' +
+                '</tr>' +
+                '</thead>' +
+                '<tbody id="contenutbody">' +
+                '</tbody>' +
+                '</table>');
+            getAllRappels();
             
             submit_logout();
         } else {
@@ -54,11 +66,32 @@ $(document).ready(function () {
                 dataType: 'json',
                 data : $(this).serialize()
             }).done(function (data) {
+                
+                $('#contenupage').append(data.msg);
                 if (data.status)
                     window.location.reload(true);
             });
             return false;
         });
 
+    }
+    function getAllRappels() {
+        $.ajax({
+            url: 'php/addRappels.php',
+            method: 'GET',
+            dataType: 'json'
+        }).done(function (data) {
+            console.log(data.notes);
+            let key;
+            for (key as data) {
+                for (let i = 0; i <= key.length(); ++i) {
+                    $('#contenutbody').append('<tr>' +
+                        '<td>' +
+                        data[key][i] +
+                        '</td></tr>')
+                }
+            }
+
+        });
     }
 });
