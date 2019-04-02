@@ -9,7 +9,6 @@ if (isset($_POST['login']) && isset($_POST['password'])) {
     $pdo = new PDO($bd, 'monrappel_read', 'monrappel_readOnly15');
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     $query = $pdo->query('SELECT COUNT(*) as trouve FROM Utilisateurs WHERE pseudo =\'' . $_POST['login'] . '\' AND mdp = \'' . $_POST['password'] .'\'');
-    //$_SESSION['user_id'] = 12;
     $resultat = $query->fetch();
     if ($resultat['trouve'] == 0){
         $data->msg = "Non trouvé";

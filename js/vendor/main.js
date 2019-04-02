@@ -16,6 +16,7 @@ $(document).ready(function () {
             $('#contenupage').fadeIn(1000).append('<table>' +
                 '<thead>' +
                 '<tr>' +
+                '<th></th>' +
                 '<th>' +
                 'Date d\'ajout</th>' +
                 '<th>' +
@@ -29,6 +30,8 @@ $(document).ready(function () {
                 '<tbody><button id="add" class="btn btn-primary">Ajouter un rappel</button ></tbody>' +
                 '</table>');
             getAllRappels();
+            addRappel();
+            supprRappel();
             
             submit_logout();
         } else {
@@ -41,10 +44,47 @@ $(document).ready(function () {
         }
         return false;
     });
+    function supprRappel() {
+        $('#deleteRap').submit(function () {
+            $.ajax({
+                url: 'php/deleteRappel.php',
+                method: 'POST',
+                dataType: 'json',
+                data: $(this).serialize()
+            }).done(function (data) {
+                alert(data.reponsedelete);
+                window.location.reload(true);
+            });
+            return false;
+        });
+    }
 
-    $('#add').click(function () {
-       $('#contenupage').fadeIn(1000).append();
-    });
+    function addRappel() {
+        $('#add').click(function () {
+            $('#contenupage').empty().append('<form id="" style="display: inline-block" action="/php/addRappel.php" method="post">\n' +
+            '\t<input id="rappel" name="rappel" placeholder="Rappel"><br/>\n' +
+                '\t<p>Date de rappel</p>' +
+            '\t<input type="date" id="dateRappel" name="dateRappel" ><br>\n' +
+            '\t<button type="submit" class="btn btn-primary">Ajouter</button ><br>\n' +
+            '</form>');
+
+        })
+
+    }
+
+    function submitAdd() {
+        $.ajax({
+            url: 'php/addRappel.php',
+            method:'POST',
+            dataType: 'json',
+            data : $(this.serialize())
+        }).done(function (data) {
+            window.location.reload(true);
+        });
+        return false;
+    }
+
+
     function submit_logout() {
         $('#formlogout').submit(function () {
             $.ajax({
@@ -86,6 +126,10 @@ $(document).ready(function () {
             for (let key in data.notes) {
                 $('#contenutbody').append('<tr>' +
                     '<td>' +
+                    '<form id="deleteRap" style="display: inline-block" action="php/deleteRappel.php" method="post">' +
+                    '<input type="hidden" id="idrappel" name="idrappel" value="'+ data.notes[key]['id'] + '">'+
+                    '</br>' +
+                    '<td>' +
                     data.notes[key]['dateajout'] +
                     '</td>' +
                     '<td>' +
@@ -95,9 +139,10 @@ $(document).ready(function () {
                     data.notes[key]['daterappel'] +
                     '</td>' +
                     '<td>' +
-                    '<button id="modify" class="btn btn-primary">Modifier</button></td>' +
-                    '<td>' +
-                    '<button id="modify" class="btn btn-danger">Supprimer</button></td></tr>');
+                    '<button type="submit" class="btn btn-danger">Supprimer</button>' +
+                    '</form>' +
+                    '</td>' +
+                    '</tr>');
             }
         });
     }
