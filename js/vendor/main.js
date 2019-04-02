@@ -61,27 +61,14 @@ $(document).ready(function () {
 
     function addRappel() {
         $('#add').click(function () {
-            $('#contenupage').empty().append('<form id="" style="display: inline-block" action="/php/addRappel.php" method="post">\n' +
+            $('#contenupage').empty().append('<form id="addrappel" style="display: inline-block" action="/php/addRappel.php" method="post">\n' +
             '\t<input id="rappel" name="rappel" placeholder="Rappel"><br/>\n' +
                 '\t<p>Date de rappel</p>' +
             '\t<input type="date" id="dateRappel" name="dateRappel" ><br>\n' +
             '\t<button type="submit" class="btn btn-primary">Ajouter</button ><br>\n' +
             '</form>');
-
         })
 
-    }
-
-    function submitAdd() {
-        $.ajax({
-            url: 'php/addRappel.php',
-            method:'POST',
-            dataType: 'json',
-            data : $(this.serialize())
-        }).done(function (data) {
-            window.location.reload(true);
-        });
-        return false;
     }
 
 

@@ -2,11 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="74f6da9a-d8e6-4487-928b-cb7f04a09438" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/php/addRappel.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/php/deleteRappel.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/vendor/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/vendor/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/php/addRappel.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/addRappel.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/php/connexion.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/connexion.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/php/deleteRappel.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/deleteRappel.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -39,17 +39,17 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="html" value="8" />
-          <entry key="js" value="1246" />
-          <entry key="php" value="574" />
-          <entry key="txt" value="36" />
+          <entry key="js" value="1330" />
+          <entry key="php" value="619" />
+          <entry key="txt" value="59" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="HTML" value="10" />
-          <entry key="JavaScript" value="1244" />
-          <entry key="PHP" value="574" />
-          <entry key="PLAIN_TEXT" value="36" />
+          <entry key="JavaScript" value="1328" />
+          <entry key="PHP" value="619" />
+          <entry key="PLAIN_TEXT" value="59" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -82,8 +82,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/vendor/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="69" lean-forward="true" selection-start-line="69" selection-end-line="69" />
+            <state relative-caret-position="255">
+              <caret line="69" column="10" lean-forward="true" selection-start-line="69" selection-start-column="10" selection-end-line="69" selection-end-column="10" />
               <folding>
                 <element signature="n#style#0;n#form#0;n#li#0;n#ul#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#form#0;n#!!top" expanded="true" />
@@ -97,8 +97,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/php/deleteRappel.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="62" selection-start-line="7" selection-start-column="62" selection-end-line="7" selection-end-column="62" />
+            <state relative-caret-position="255">
+              <caret line="15" selection-start-line="15" selection-end-line="15" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -115,8 +115,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/php/addRappel.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="226" selection-start-line="10" selection-start-column="226" selection-end-line="10" selection-end-column="226" />
+            <state relative-caret-position="272">
+              <caret line="16" column="34" selection-start-line="16" selection-start-column="34" selection-end-line="16" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -124,8 +124,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/php/connexion.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="5" lean-forward="true" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
+            <state relative-caret-position="527">
+              <caret line="31" column="34" selection-start-line="31" selection-start-column="34" selection-end-line="31" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -142,8 +142,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/php/is_connected.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" column="2" selection-start-line="17" selection-start-column="2" selection-end-line="17" selection-end-column="2" />
+            <state relative-caret-position="153">
+              <caret line="9" column="32" lean-forward="true" selection-start-line="9" selection-start-column="32" selection-end-line="9" selection-end-column="32" />
             </state>
           </provider>
         </entry>
@@ -192,8 +192,8 @@
         <option value="$PROJECT_DIR$/php/modifyRappel.php" />
         <option value="$PROJECT_DIR$/deleteRappel.php" />
         <option value="$PROJECT_DIR$/php/connexion.php" />
-        <option value="$PROJECT_DIR$/php/deleteRappel.php" />
         <option value="$PROJECT_DIR$/js/vendor/main.js" />
+        <option value="$PROJECT_DIR$/php/deleteRappel.php" />
         <option value="$PROJECT_DIR$/php/addRappel.php" />
       </list>
     </option>
@@ -294,7 +294,7 @@
       <workItem from="1553790610097" duration="9802000" />
       <workItem from="1554043061838" duration="12563000" />
       <workItem from="1554203094567" duration="10819000" />
-      <workItem from="1554224900370" duration="7750000" />
+      <workItem from="1554224900370" duration="8463000" />
     </task>
     <task id="LOCAL-00001" summary="Ajout d'inscription et avancement connexion">
       <created>1552064697226</created>
@@ -324,11 +324,18 @@
       <option name="project" value="LOCAL" />
       <updated>1554225831722</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Ajout suppr et ajout">
+      <created>1554232712465</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1554232712465</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="48996000" />
+    <option name="totallyTimeSpent" value="49709000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -400,7 +407,8 @@
     <MESSAGE value="Connexion fonctionne" />
     <MESSAGE value="Modification ENTIèRE DU SITE" />
     <MESSAGE value="fin récup bdd + début add" />
-    <option name="LAST_COMMIT_MESSAGE" value="fin récup bdd + début add" />
+    <MESSAGE value="Ajout suppr et ajout" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ajout suppr et ajout" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/main.css" />
@@ -438,13 +446,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/php/Inscription.php" />
     <entry file="file://$PROJECT_DIR$/addRappels.php" />
-    <entry file="file://$PROJECT_DIR$/php/is_connected.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="2" selection-start-line="17" selection-start-column="2" selection-end-line="17" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/php/modifyRappel.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -477,24 +478,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/php/connexion.php">
+    <entry file="file://$PROJECT_DIR$/php/is_connected.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="5" lean-forward="true" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
+        <state relative-caret-position="153">
+          <caret line="9" column="32" lean-forward="true" selection-start-line="9" selection-start-column="32" selection-end-line="9" selection-end-column="32" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/php/deleteRappel.php">
+    <entry file="file://$PROJECT_DIR$/php/connexion.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="62" selection-start-line="7" selection-start-column="62" selection-end-line="7" selection-end-column="62" />
+        <state relative-caret-position="527">
+          <caret line="31" column="34" selection-start-line="31" selection-start-column="34" selection-end-line="31" selection-end-column="34" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/vendor/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="69" lean-forward="true" selection-start-line="69" selection-end-line="69" />
+        <state relative-caret-position="255">
+          <caret line="69" column="10" lean-forward="true" selection-start-line="69" selection-start-column="10" selection-end-line="69" selection-end-column="10" />
           <folding>
             <element signature="n#style#0;n#form#0;n#li#0;n#ul#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#form#0;n#!!top" expanded="true" />
@@ -511,10 +512,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/php/deleteRappel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" selection-start-line="15" selection-end-line="15" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/php/addRappel.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="226" selection-start-line="10" selection-start-column="226" selection-end-line="10" selection-end-column="226" />
+        <state relative-caret-position="272">
+          <caret line="16" column="34" selection-start-line="16" selection-start-column="34" selection-end-line="16" selection-end-column="34" />
         </state>
       </provider>
     </entry>

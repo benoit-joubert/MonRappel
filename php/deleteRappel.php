@@ -8,15 +8,10 @@ if (isset($_POST['idrappel'])) {
     $pdo = new PDO($bd, 'monrappel_delete', 'monrappel_deleteMdp15');
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     $query = $pdo->query('DELETE FROM Rappel WHERE Rappel.id =\'' . $id . '\'');
-    if ($query === TRUE) {
-        $data->reponsedelete = "OK";
-    } else {
-        $data->reponsedelete = "KO";
-    }
 }
 
 header('Cache-Control: no-cache, must-revalidate');
 header('Expires: Mon, 26 Jul 1997 05:00:00 GMT');
 header('Content-type: application/json');
+header('Location: ../index.html');
 
-echo json_encode($data);
