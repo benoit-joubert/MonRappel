@@ -13,28 +13,26 @@ $(document).ready(function () {
                 '                </form>\n' +
                 '            </li>\n' +
                 '        </ul>')
-            $('#contenupage').append('<table>' +
+            $('#contenupage').fadeIn(1000).append('<table>' +
                 '<thead>' +
                 '<tr>' +
                 '<th>' +
                 'Date d\'ajout</th>' +
                 '<th>' +
                 'Mes Rappels</th>' +
+                '<th>' +
+                'Date du rappel</th>' +
                 '</tr>' +
                 '</thead>' +
                 '<tbody id="contenutbody">' +
                 '</tbody>' +
+                '<tbody><button id="add" class="btn btn-primary">Ajouter un rappel</button ></tbody>' +
                 '</table>');
             getAllRappels();
             
             submit_logout();
         } else {
-            $('#contenuNavBar').append('<ul class="navbar-nav mr-auto">\n' +
-                '            <li class="nav-item active">\n' +
-                '                <button id="seconnecter" class="btn btn-success">Se Connecter</button>\n' +
-                '            </li>\n' +
-                '        </ul>');
-            $('#contenupage').append('<form id="connected" style="display: inline-block" action="/php/connexion.php" method="post">\n' +
+            $('#contenupage').fadeIn(1000).append('<form id="connected" style="display: inline-block" action="/php/connexion.php" method="post">\n' +
                 '\t<input id="login" name="login" placeholder="Pseudo"><br/>\n' +
                 '\t<input type="password" id="password" name="password" placeholder="Mot de passe"><br>\n' +
                 '\t<button type="submit" class="btn btn-primary">Connexion</button ><br>\n' +
@@ -43,7 +41,10 @@ $(document).ready(function () {
         }
         return false;
     });
-    
+
+    $('#add').click(function () {
+       $('#contenupage').fadeIn(1000).append();
+    });
     function submit_logout() {
         $('#formlogout').submit(function () {
             $.ajax({
@@ -77,21 +78,27 @@ $(document).ready(function () {
     }
     function getAllRappels() {
         $.ajax({
-            url: 'php/addRappels.php',
+            url: 'php/createListRappels.php',
             method: 'GET',
             dataType: 'json'
         }).done(function (data) {
             console.log(data.notes);
-            let key;
-            for (key as data) {
-                for (let i = 0; i <= key.length(); ++i) {
-                    $('#contenutbody').append('<tr>' +
-                        '<td>' +
-                        data[key][i] +
-                        '</td></tr>')
-                }
+            for (let key in data.notes) {
+                $('#contenutbody').append('<tr>' +
+                    '<td>' +
+                    data.notes[key]['dateajout'] +
+                    '</td>' +
+                    '<td>' +
+                    data.notes[key]['rappel'] +
+                    '</td>' +
+                    '<td>' +
+                    data.notes[key]['daterappel'] +
+                    '</td>' +
+                    '<td>' +
+                    '<button id="modify" class="btn btn-primary">Modifier</button></td>' +
+                    '<td>' +
+                    '<button id="modify" class="btn btn-danger">Supprimer</button></td></tr>');
             }
-
         });
     }
 });
