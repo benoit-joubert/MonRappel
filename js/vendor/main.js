@@ -5,7 +5,6 @@ $(document).ready(function () {
         dataType: 'json'
     }).done(function (data) {
         if (data.is_connected) {
-
             $('#contenuNavBar').append('<ul class="navbar-nav mr-auto">\n' +
                 '            <li class="nav-item active">\n' +
                 '                <form style="display: inline-block" id="formlogout" action="/php/deconnexion.php" method="post">\n' +
