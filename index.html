@@ -18,6 +18,7 @@
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script>window.jQuery || document.write('<script src="/js/vendor/jquery-3.3.1.min.js"><\/script>')</script>
     <script src="/js/plugins.js"></script>
+    <script src="/js/vendor/main.js"></script>
 
 
 </head>
@@ -27,22 +28,12 @@
 <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
 <![endif]-->
 <nav class="navbar navbar-dark bg-dark">
-    <a class="navbar-brand" href="index.php">MonRappel</a>
-    <p>Bonjour <?php echo $_COOKIE["user"];?></p>
+    <a class="navbar-brand" id="retouraccueil">MonRappel</a>
     <div id="contenuNavBar">
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-                <form style="display: inline-block" action="/php/deconnexion.php" method="post">
-                    <button type="submit" id="deconnexion" class="btn btn-danger">Déconnexion</button>
-                </form>
-            </li>
-        </ul>
     </div>
 </nav>
 
 <div id="contenupage">
-
-    <?php echo $_SESSION['login']?>
 
 </div>
 

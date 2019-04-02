@@ -1,10 +1,8 @@
 <?php
 session_start();
-unset($_COOKIE["user"]);
+
+$_SESSION = array();
+
 session_destroy();
-
-echo "Vous êtes déconnecté.";
-
-echo "<a href=\"../index.php\">Retour à l'accueil</a>";
 
 ?>
